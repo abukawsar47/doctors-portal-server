@@ -33,15 +33,15 @@ function verifyJWT(req, res, next) {
     });
 }
 
-const emailSenderOptions = {
+/* const emailSenderOptions = {
     auth: {
         api_key: process.env.EMAIL_SENDER_KEY
     }
-}
+} */
 
 // const emailClient = nodemailer.createTransport(sgTransport(emailSenderOptions));
 
-function sendAppointmentEmail(booking) {
+/* function sendAppointmentEmail(booking) {
     const { patient, patientName, treatment, date, slot } = booking;
 
     var email = {
@@ -104,7 +104,7 @@ function sendPaymentConfirmationEmail(booking) {
         }
     });
 
-}
+} */
 
 
 async function run() {
@@ -249,7 +249,7 @@ async function run() {
             }
             const result = await bookingCollection.insertOne(booking);
             console.log('sending email');
-            sendAppointmentEmail(booking);
+            // sendAppointmentEmail(booking);
             return res.send({ success: true, result });
         });
 

@@ -44,7 +44,7 @@ function verifyJWT(req, res, next) {
 /* function sendAppointmentEmail(booking) {
     const { patient, patientName, treatment, date, slot } = booking;
 
-    var email = {
+    var email = {h
         from: process.env.EMAIL_SENDER,
         to: patient,
         subject: `Your Appointment for ${treatment} is on ${date} at ${slot} is Confirmed`,
